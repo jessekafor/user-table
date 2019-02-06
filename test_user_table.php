@@ -10,7 +10,7 @@
 //shortcode function
 function test_user_table_func() {
   ob_start();
-  if ( ! is_admin() ) { ?>
+  if ( ! current_user_can('administrator') ) { ?>
     <div class="user-table-shortcode">
      <h4>List of Users</h4>
      <table id="userTable" class="display" style="width:100%">
